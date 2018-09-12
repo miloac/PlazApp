@@ -7,7 +7,7 @@ export class Login extends React.Component{
         return (
 			<div>
 				<div className="s">
-					<h1>Iniciar Sesion</h1>
+					<h1>Bienvenido</h1>
 					<section>
 						<p>Nombre de Uusario:</p>
 						<input 
