@@ -1,21 +1,53 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './component/Login';
+import { Login } from './component/Login';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+
+var logged = false;
+var user = {name:"admin",pass:123};
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+		
+	LoginView = () => (
+		<Login handleLogin = {this.handleSubmit}
+				handleEmailChange = {this.handleEmailChange}
+				handlePasswordChange = {this.handlePasswordChange}
+		/>
+	);
+	
+	render() {
+		if (!logged){
+			return (
+				<Router>
+					<Route exact path="/" component={this.LoginView} />
+				</Router>
+			);
+		}else{
+			return (
+				<h1>paso</h1>
+			);
+		}
+	}
+	
+	handleSubmit = event => {
+        if (this.state.email === user.name && this.state.password === user.pass) {
+            logged = true;
+        }
+    }
+	
+	handleEmailChange = event => {
+        this.setState({
+            email: event.target.value
+        });
+    }
+	
+	handlePasswordChange = event => {
+        this.setState({
+            password: event.target.value
+        });
+    }
 }
 
 export default App;

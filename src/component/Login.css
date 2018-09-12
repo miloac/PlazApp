@@ -1,0 +1,89 @@
+:root {
+    --fc: #001a23;
+	--sc: #FFFFFF;
+	--tc: #002C3E;
+	--cc: #006C7E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-image: url("../images/principal/bg_login.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	align-items: center;
+	text-align: center;
+}
+
+.s{
+	background-color: var(--tc);
+	width: 70%;
+	height: 80vh;
+	text-align: center;
+	align-items: center;
+	padding: 10em;
+	position: absolute;
+	top: 10vh;
+}
+
+.right{
+	background-image: url("../images/principal/1.jpg");
+	background-size: auto;
+	background-attachment:fixed;
+	width:31%;
+	height:100vh;
+	position: absolute;
+	right:0%;
+	box-shadow: 0vw 0vw 2vw black; 
+	align-items:center;
+	padding-top: 30vh;
+}
+
+.logo{
+	width: 90%;
+}
+
+input{
+	width: 60%;
+	font-family: arial black;
+	font-size: 1.0vw;
+	padding: 0%;
+	height: 4.0vw;
+	border-radius: 0.8vw;
+}
+
+.loginButton{
+	border-radius: 0.8vw;
+	width: 100%;
+	background-color: var(--sc);
+	font-style: arial black;
+	padding: 2%;
+	font-size: 1.5vw;
+	color: black;
+}
+
+.loginButton:hover{
+	color: 	var(--sc);
+	color: white;
+	background-color: var(--cc);
+}
+
+p{
+	width: 40%;
+	font-family: arial;
+	font-size: 1.5vw;
+	color: white;
+	padding-right: 2%;
+}
+
+h1{
+	font-size: 2.0vw;
+	color: white;
+}
+
+section{
+	display: flex;
+	width: 100%;
+}
