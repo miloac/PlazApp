@@ -1,13 +1,3 @@
-:root {
-    --fc: #001a23;
-	--sc: #FFFFFF;
-	--tc: #002C3E;
-	--cc: #006C7E;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 body{
 	background-image: url("../images/principal/bg_login.jpg");

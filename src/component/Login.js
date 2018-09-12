@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import './styles.css';
 
 export class Login extends React.Component{ 
 

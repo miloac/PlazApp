@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './component/Login';
 import { Login } from './component/Login';
+import { TodoApp } from './component/TodoApp';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 var logged = false;
@@ -17,16 +18,22 @@ class App extends Component {
 		/>
 	);
 	
+	TodoAppView = () => (
+		<TodoApp/>
+	);
+	
 	render() {
 		if (!logged){
 			return (
 				<Router>
-					<Route exact path="/" component={this.LoginView} />
+					<Route exact path="/" component={this.TodoAppView} />
 				</Router>
 			);
 		}else{
 			return (
-				<h1>paso</h1>
+				<Router>
+					<Route exact path="/" component={this.TodoApp} />
+				</Router>
 			);
 		}
 	}
