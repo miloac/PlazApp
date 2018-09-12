@@ -1,8 +1,8 @@
 import React from 'react';
-import './TodoApp.css';
+import './PlazApp.css';
 import './styles.css';
 
-export class TodoApp extends React.Component{ 
+export class PlazApp extends React.Component{ 
 
 	
 	render(){

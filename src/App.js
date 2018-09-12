@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './component/Login';
 import { Login } from './component/Login';
-import { TodoApp } from './component/TodoApp';
+import { PlazApp } from './component/PlazApp';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 var logged = false;
@@ -18,21 +18,21 @@ class App extends Component {
 		/>
 	);
 	
-	TodoAppView = () => (
-		<TodoApp/>
+	PlazAppView = () => (
+		<PlazApp/>
 	);
 	
 	render() {
 		if (!logged){
 			return (
 				<Router>
-					<Route exact path="/" component={this.TodoAppView} />
+					<Route exact path="/" component={this.PlazAppView} />
 				</Router>
 			);
 		}else{
 			return (
 				<Router>
-					<Route exact path="/" component={this.TodoApp} />
+					<Route exact path="/" component={this.PlazaApp} />
 				</Router>
 			);
 		}

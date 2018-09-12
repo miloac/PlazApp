@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
 import './styles.css';
+import Button from '@material-ui/core/Button';
 
 export class Login extends React.Component{ 
 
@@ -23,13 +24,13 @@ export class Login extends React.Component{
 							onchange={this.props.handlePasswordChange}
 						/>
 					</section>
-					<button 
+					<Button 
 						className="loginButton" 
-						type="button" 
-						onclick={this.props.handleLogin}
+						type="Button" 
+						onClick={this.props.handleLogin}
 						>
 						Iniciar Sesion
-					</button>
+					</Button>
 				</div>
 				<div className="right">
 					<img src={require("../images/principal/logo.png")} className="logo" />
